@@ -14,3 +14,14 @@
 
 puts "Isogram"
 puts ARGV[0]
+
+
+word = ARGV[0]
+
+count = word.chars.uniq.count { |char| word.count(char) > 1 }
+
+if count == 0
+    puts "Isogram"
+else
+    puts "Not Isogram"
+end
