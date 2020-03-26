@@ -5,17 +5,22 @@
 #
 puts "FizzBuzz"
 
-count = 1
+mult1 = 3
+mult2 = 5
+resp1 = "Fizz"
+resp2 = "Buzz"
+resp3 = "FizzBuzz"
 
-while count <= 100
-    if count % 3 == 0 && count % 5 == 0
-        puts "FizzBuzz"    
-    elsif count % 3 == 0
-        puts "Fizz"
-    elsif count % 5 == 0
-        puts "Buzz"
+numArray = (1..100).to_a
+
+numArray.each do |item| 
+    if item % mult1 == 0 && item % mult2 == 0
+        puts resp3
+    elsif item % mult1 == 0
+        puts resp1
+    elsif item % mult2 == 0
+        puts resp2
     else
-        puts count
+        puts item
     end
-    count += 1
 end
