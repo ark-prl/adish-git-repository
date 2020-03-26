@@ -18,17 +18,10 @@
 puts "Hashtags"
 puts ARGV[0]
 
-words = ARGV[0]
+splits = ARGV[0].downcase.split
 
-splits = words.downcase.split
-
-count = 0
-result = "#";
-
-while count < splits.length
-    result += splits[count].capitalize
-    count += 1
-end
+result = "#"
+splits.each { |item| result += item.capitalize }
 
 if result.length > 140
     puts "Invalid"
