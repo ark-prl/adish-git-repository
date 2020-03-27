@@ -14,4 +14,17 @@
 #  => "Invalid Format"
 
 puts "Odd or Even"
-puts ARGV
+# puts ARGV
+
+array = ARGV.map(&:to_i)
+
+odd_numbers = array.select { |item| (item % 2) == 1 }
+even_numbers = array.select { |item| (item % 2) == 0 }
+
+if odd_numbers.length == 1
+    puts odd_numbers
+elsif even_numbers.length == 1
+    puts even_numbers
+else
+    puts "Invalid Format"
+end
