@@ -14,3 +14,15 @@
 
 puts "Pangram"
 puts ARGV[0]
+
+line = ARGV[0]
+
+def pangram?(line)
+    ('a'..'z').all? { |word| line.downcase.include? (word) }
+  end
+  
+  if pangram?(line)
+    puts "Pangram"
+  else
+    puts "Not Pangram"
+end
