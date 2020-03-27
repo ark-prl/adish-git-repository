@@ -17,3 +17,16 @@
 #
 puts "Number Reverse"
 puts ARGV[0]
+
+n = ARGV[0].to_i
+squareSize = n ** 2
+square = (0..squareSize-1).to_a.reverse()
+
+square.each do |item|
+  if (square.index(item) + 1) % n == 0
+    print "#{item}".rjust(3) + "\n"
+  else
+    print "#{item}".rjust(3)
+  end
+end
+
