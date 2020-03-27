@@ -7,4 +7,26 @@
 #  => 45
 
 puts "Max Product Pair"
-puts ARGV[0]
+# puts ARGV
+
+array = ARGV.map(&:to_i)
+
+sorted = array.sort()
+n = sorted.length
+
+a = sorted[0]
+b = sorted[1]
+c = sorted[n-2]
+d = sorted[n-1]
+
+if array.length > 1
+    if (a * d).abs > (a * b).abs && (a * d).abs > (c * d).abs
+        puts a * d
+    elsif (a * b).abs > (c * d).abs
+        puts a * b
+    else
+        puts c * d
+    end
+else
+    puts "At least two integers required"
+end
