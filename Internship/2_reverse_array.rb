@@ -7,3 +7,8 @@
 
 puts "Reverse Array"
 array = ARGV
+
+reverseArray = array.reverse.join(" ")
+
+puts reverseArray
+
