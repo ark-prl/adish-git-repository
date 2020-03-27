@@ -18,3 +18,19 @@
 
 puts "Narcissistic Number"
 puts ARGV[0]
+
+numbers = ARGV[0].to_s.chars.map(&:to_i)
+exp = numbers.length
+
+puts numbers.to_s
+puts exp
+result = 0
+
+numbers.each do |item| result += (item ** exp)
+end
+
+if result == ARGV[0].to_i
+    puts "#{result} is narcissistic"
+else
+    puts "#{result} is not narcissistic"
+end
