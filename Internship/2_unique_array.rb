@@ -10,3 +10,10 @@
 
 puts "Unique Array"
 puts ARGV
+
+a = ARGV
+if a.uniq.length == a.length
+    puts "Array has unique elements"
+else
+    puts "Array has duplicated elements"
+end
