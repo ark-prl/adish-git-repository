@@ -12,4 +12,17 @@
 #  => 6
 
 puts "Frog Jump"
-puts ARGV
+# puts ARGV
+
+input = ARGV.map(&:to_i)
+
+x = input[0]
+y = input[1]
+d = input[2]
+
+def jumps_needed(x, y, d)
+    jumps = (y - x) / d.to_f
+    jumps.ceil
+end
+
+puts jumps_needed(x, y, d)
