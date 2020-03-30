@@ -14,3 +14,15 @@
 
 puts "Parentheses Validator"
 puts ARGV[0]
+
+line = ARGV[0]
+
+def validate_paren?(string)
+    newString = string.gsub('()','')
+    return true if newString.empty?
+    return false if newString.length.odd?
+    return false if newString.include?(string)
+    validate_paren?(newString)
+end
+
+puts validate_paren?(line)
