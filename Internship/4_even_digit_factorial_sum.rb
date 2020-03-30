@@ -18,3 +18,21 @@
 # 24
 puts "Factorial Even Digit Sum"
 puts ARGV[0]
+
+n = ARGV[0].to_i
+fact_num = (1..n).to_a
+
+fact = 1
+
+fact_num.each do |item| fact = fact * item
+end
+
+digits = fact.to_s.chars.map(&:to_i)
+
+even_numbers = digits.select { |item| (item % 2) == 0 }
+
+sum = 0
+even_numbers.each do |item| sum += item
+end
+
+puts sum
