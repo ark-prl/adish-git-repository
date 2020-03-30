@@ -20,7 +20,7 @@ puts ARGV[0]
 
 n = ARGV[0].to_i
 squareSize = n ** 2
-square = (0..squareSize-1).to_a.reverse()
+square = (0...squareSize).to_a.reverse()
 
 square.each do |item|
   if (square.index(item) + 1) % n == 0
