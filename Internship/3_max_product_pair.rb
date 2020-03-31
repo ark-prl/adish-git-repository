@@ -20,13 +20,8 @@ c = sorted[n-2]
 d = sorted[n-1]
 
 if array.length > 1
-    if (a * d).abs > (a * b).abs && (a * d).abs > (c * d).abs
-        puts a * d
-    elsif (a * b).abs > (c * d).abs
-        puts a * b
-    else
-        puts c * d
-    end
+    maxPair = [ (a*d).abs, (a*b).abs, (c*d).abs ]
+    puts maxPair.max
 else
     puts "At least two integers required"
 end
