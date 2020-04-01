@@ -12,17 +12,18 @@
 # $ ruby 4_parentheses.rb "("
 # => false
 
-puts "Parentheses Validator"
+puts 'Parentheses Validator'
 puts ARGV[0]
 
 line = ARGV[0]
 
 def validate_paren?(string)
-    newString = string.gsub('()','')
-    return true if newString.empty?
-    return false if newString.length.odd?
-    return false if newString.include?(string)
-    validate_paren?(newString)
+  new_str = string.gsub('()', '')
+  return true if new_str.empty?
+  return false if new_str.length.odd?
+  return false if new_str.include?(string)
+
+  validate_paren?(new_str)
 end
 
 puts validate_paren?(line)

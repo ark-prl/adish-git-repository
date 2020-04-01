@@ -15,16 +15,16 @@
 # $ ruby 2_hashtags.rb "RUBY programming"
 # => "#RubyProgramming"
 
-puts "Hashtags"
+puts 'Hashtags'
 puts ARGV[0]
 
 splits = ARGV[0].downcase.split
 
-result = "#"
+result = '#'
 splits.each { |item| result += item.capitalize }
 
 if result.length > 140
-    puts "Invalid"
+  puts 'Invalid'
 else
-    puts result
+  puts result
 end

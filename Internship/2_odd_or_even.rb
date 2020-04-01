@@ -13,18 +13,18 @@
 #     There 4 odd numbers and 3 even numbers.
 #  => "Invalid Format"
 
-puts "Odd or Even"
+puts 'Odd or Even'
 # puts ARGV
 
 array = ARGV.map(&:to_i)
 
-odd_numbers = array.select { |item| (item % 2) == 1 }
-even_numbers = array.select { |item| (item % 2) == 0 }
+odd_numbers = array.select(&:odd?)
+even_numbers = array.select(&:even?)
 
 if odd_numbers.length == 1
-    puts odd_numbers
+  puts odd_numbers
 elsif even_numbers.length == 1
-    puts even_numbers
+  puts even_numbers
 else
-    puts "Invalid Format"
+  puts 'Invalid Format'
 end

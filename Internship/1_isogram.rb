@@ -12,16 +12,15 @@
 # => "Not Isogram"
 #
 
-puts "Isogram"
+puts 'Isogram'
 puts ARGV[0]
-
 
 word = ARGV[0]
 
 count = word.chars.uniq.count { |char| word.count(char) > 1 }
 
-if count == 0
-    puts "Isogram"
+if count.zero?
+  puts 'Isogram'
 else
-    puts "Not Isogram"
+  puts 'Not Isogram'
 end

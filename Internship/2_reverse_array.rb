@@ -5,10 +5,9 @@
 #  $ ruby reverse_array.rb 1 2 3 4 5
 #  5 4 3 2 1
 
-puts "Reverse Array"
+puts 'Reverse Array'
 array = ARGV
 
-reverseArray = array.reverse.join(" ")
+reverse_array = array.reverse.join(' ')
 
-puts reverseArray
-
+puts reverse_array

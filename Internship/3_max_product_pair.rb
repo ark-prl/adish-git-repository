@@ -6,22 +6,22 @@
 #    2*4 = 8, 2*9 = 18, 2*5 = 10, 4*9 = 36, 4*5 = 20, 9*5 = 45
 #  => 45
 
-puts "Max Product Pair"
+puts 'Max Product Pair'
 # puts ARGV
 
 array = ARGV.map(&:to_i)
 
-sorted = array.sort()
+sorted = array.sort
 n = sorted.length
 
 a = sorted[0]
 b = sorted[1]
-c = sorted[n-2]
-d = sorted[n-1]
+c = sorted[n - 2]
+d = sorted[n - 1]
 
 if array.length > 1
-    maxPair = [ (a*d).abs, (a*b).abs, (c*d).abs ]
-    puts maxPair.max
+  max_pair = [(a * d).abs, (a * b).abs, (c * d).abs]
+  puts max_pair.max
 else
-    puts "At least two integers required"
+  puts 'At least two integers required'
 end

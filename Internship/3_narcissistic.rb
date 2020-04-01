@@ -16,7 +16,7 @@
 #    1^4 + 6^4 + 3^4 + 4^4 = 1 + 1296 + 81 + 256 = 1634
 #  => "1634 is narcissistic"
 
-puts "Narcissistic Number"
+puts 'Narcissistic Number'
 puts ARGV[0]
 
 numbers = ARGV[0].to_s.chars.map(&:to_i)
@@ -26,11 +26,12 @@ puts numbers.to_s
 puts exp
 result = 0
 
-numbers.each do |item| result += (item ** exp)
+numbers.each do |item|
+  result += (item**exp)
 end
 
 if result == ARGV[0].to_i
-    puts "#{result} is narcissistic"
+  puts "#{result} is narcissistic"
 else
-    puts "#{result} is not narcissistic"
+  puts "#{result} is not narcissistic"
 end

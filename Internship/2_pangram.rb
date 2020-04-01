@@ -11,18 +11,17 @@
 # $ ruby 2_pangram.rb "This is not a pangram."
 # => "Not Pangram"
 
-
-puts "Pangram"
+puts 'Pangram'
 puts ARGV[0]
 
 line = ARGV[0]
 
 def pangram?(line)
-    ('a'..'z').all? { |word| line.downcase.include? (word) }
-  end
-  
-  if pangram?(line)
-    puts "Pangram"
-  else
-    puts "Not Pangram"
+  ('a'..'z').all? { |word| line.downcase.include?(word) }
+end
+
+if pangram?(line)
+  puts 'Pangram'
+else
+  puts 'Not Pangram'
 end

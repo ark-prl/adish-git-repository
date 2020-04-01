@@ -8,12 +8,12 @@
 #  $ ruby 2_unique_array.rb 1 2 2 2 3
 # "Array has duplicated elements"
 
-puts "Unique Array"
+puts 'Unique Array'
 puts ARGV
 
 a = ARGV
 if a.uniq.length == a.length
-    puts "Array has unique elements"
+  puts 'Array has unique elements'
 else
-    puts "Array has duplicated elements"
+  puts 'Array has duplicated elements'
 end

@@ -8,7 +8,7 @@
 #    5  10 15 20 25 30
 #    6  12 18 24 30 36
 
-puts "Multiplication Table"
+puts 'Multiplication Table'
 puts ARGV[0]
 
 n = ARGV[0].to_i
@@ -17,4 +17,3 @@ range = Array(1..n)
 range.each do |element|
   range.each { |item| print "#{element * item} ".rjust(3) } && puts
 end
-

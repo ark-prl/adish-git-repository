@@ -23,48 +23,48 @@
 #
 #  49   48   47   46   45   44   43   42
 #
-puts "Number Spiral"
+puts 'Number Spiral'
 puts ARGV[0]
 
-N  = ARGV[0].to_i
+N = ARGV[0].to_i
 
 def format(value)
-   width = 4
-   "#{value}".rjust(width)
+  width = 4
+  value.to_s.rjust(width)
 end
 
-def o(n, row, col)
-   x = (n - 1) ** 2
-   if col == 0
-      x + row
-   elsif row == n - 1
-      x + row + col
-   else 
-      e(n - 1, row, col - 1)
-   end
+def o(num, row, col)
+  x = (num - 1)**2
+  if col.zero?
+    x + row
+  elsif row == num - 1
+    x + row + col
+  else
+    e(num - 1, row, col - 1)
+  end
 end
 
-def e(n, row, col)
-   x = (n ** 2) - 1
-   if row == 0
-      x - col
-   elsif col == n - 1 
-      x - col - row
-   else 
-      o(n - 1, row - 1, col)
-   end
+def e(num, row, col)
+  x = (num**2) - 1
+  if row.zero?
+    x - col
+  elsif col == num - 1
+    x - col - row
+  else
+    o(num - 1, row - 1, col)
+  end
 end
 
-def spiral(n)
-   range = (0...n)
-   range_order = range.to_a.reverse()
-   range.map do |row|
-      if (n % 2).zero?
-         range_order.map { |col| format(e(n, row, col)) }
-      else
-         range_order.map { |col| format(o(n, row, col)) }
-      end.join
-   end.join("\n")
+def spiral(num)
+  range = (0...num)
+  range_order = range.to_a.reverse
+  range.map do |row|
+    if (num % 2).zero?
+      range_order.map { |col| format(e(num, row, col)) }
+    else
+      range_order.map { |col| format(o(num, row, col)) }
+    end.join
+  end.join("\n")
 end
 
 puts spiral(N)
